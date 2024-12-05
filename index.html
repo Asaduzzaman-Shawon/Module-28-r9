@@ -20,7 +20,7 @@
                     <div class="stats shadow">
                         <div class="stat">
                           <div class="stat-title text-center">Your Account Balance</div>
-                          <div id="account-balance" class="stat-value text-center">9,400</div>
+                          <div id="account-balance" class="stat-value text-center">9400</div>
                           <div class="stat-desc text-center">21% more than last month</div>
                         </div>
                       </div>
@@ -35,26 +35,7 @@
                     <!-- Cash Out In section start -->
                       <div class="divider m-0 container mx-auto flex"></div>
                     <!-- From section start -->
-                    <div class="card bg-base-100 shadow-2xl">
-                        <form class="card-body py-4">
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Cash Out Ammount</span>
-                            </label>
-                            <input id="cash-in-ammount" type="number" placeholder="Enter your ammount" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Pin</span>
-                            </label>
-                            <input id="pin" type="password" placeholder="Enter your pin" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control mt-6">
-                            <button class="btn btn-primary" type="submit">Cash In Confirm</button>
-                          </div>
-                        </form>
-                      </div>
-                    <div class="card bg-base-100 shadow-2xl">
+                    <div id="cash-in-from" class=" card bg-base-100 shadow-2xl hidden">
                         <form class="card-body py-4">
                           <div class="form-control">
                             <label class="label">
@@ -66,10 +47,29 @@
                             <label class="label">
                               <span class="label-text">Pin</span>
                             </label>
+                            <input id="account-pin" type="password" placeholder="Enter your pin" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="cash-in-confirm-btn" class="btn btn-primary" type="submit">Cash In Confirm</button>
+                          </div>
+                        </form>
+                      </div>
+                    <div id="cash-out-from" class=" card bg-base-100 shadow-2xl hidden">
+                        <form class="card-body py-4">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Cash Out Ammount</span>
+                            </label>
+                            <input id="cash-out-ammount" type="number" placeholder="Enter your ammount" class="input input-bordered" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text">Pin</span>
+                            </label>
                             <input id="pin" type="password" placeholder="Enter your pin" class="input input-bordered" required />
                           </div>
                           <div class="form-control mt-6">
-                            <button class="btn btn-primary" type="submit">Cash In Confirm</button>
+                            <button class="btn btn-primary" type="submit">Cash Out Confirm</button>
                           </div>
                         </form>
                       </div>
