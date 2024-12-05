@@ -10,7 +10,8 @@ function hideUp(id){
 
 function getInputValue(id){
     const a = document.getElementById(id).value;
-    return a;
+    const b = parseFloat(a)
+    return b;
 }
 
 function getTextValue(id){

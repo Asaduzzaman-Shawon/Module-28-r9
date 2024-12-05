@@ -13,21 +13,32 @@ document.getElementById('cash-out')
 document.getElementById('cash-in-confirm-btn')
 .addEventListener('click', function(e){
     e.preventDefault()
-    const test = getTextValue('cash-in-ammount')
+    const test = getTextValue('account-balance')
     const test2 = getInputValue('account-pin');
-    if(test2 === '1234'){
-        const test3 = getTextValue('account-balance');
-        const test4 = test3 + test;
-        console.log(test4);
+    const test3 = getInputValue('cash-in-ammount')
+    if(test2 === 1234){
+        const test4 = test + test3
         document.getElementById('account-balance').innerText = test4
     }
     else{
         alert('Wrong pin')
     }
-    
 })
 
-
+document.getElementById('cash-out-confirm')
+.addEventListener('click', function(e){
+    e.preventDefault();
+    const addedAmount = getInputValue("cash-out-ammount");
+    const accountBalance = getTextValue('account-balance');
+    const pin = getInputValue('pin');
+    if(pin === 1234){
+        const totalAmmount = accountBalance + addedAmount;
+        document.getElementById('account-balance').innerText = totalAmmount;
+    }
+    else{
+        alert("Wrong crediantals")
+    }
+})
 
 
 
