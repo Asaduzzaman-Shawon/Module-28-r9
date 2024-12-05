@@ -1,96 +1,137 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payyo System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    
-
+  </head>
+  <body>
     <main class="container flex mx-auto justify-center items-center mt-8">
-        <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-              <div class="artboard artboard-demo phone-1">
-                    <div class="divider m-0 container mx-auto flex"></div>
-                    <!-- Account balance start-->
-                    <div class="stats shadow">
-                        <div class="stat">
-                          <div class="stat-title text-center">Your Account Balance</div>
-                          <div id="account-balance" class="stat-value text-center">9400</div>
-                          <div class="stat-desc text-center">21% more than last month</div>
-                        </div>
-                      </div>
-                    <!-- Account balance end--> 
-                    <div class="divider m-0 container mx-auto flex"></div>
-                    <!-- Cash Out In section start -->
-                    <div>
-                        <button id="cash-in" class="btn btn-lg">Cash In</button>
-                        <button id="cash-out" class="btn btn-lg">Cash Out</button>
-                    </div>
-                    
-                    <!-- Cash Out In section start -->
-                      <div class="divider m-0 container mx-auto flex"></div>
-                    <!-- From section start -->
-                    <div id="cash-in-from" class=" card bg-base-100 shadow-2xl hidden">
-                        <form class="card-body py-4">
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Cash In Ammount</span>
-                            </label>
-                            <input id="cash-in-ammount" type="number" placeholder="Enter your ammount" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Pin</span>
-                            </label>
-                            <input id="account-pin" type="password" placeholder="Enter your pin" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control mt-6">
-                            <button id="cash-in-confirm-btn" class="btn btn-primary" type="submit">Cash In Confirm</button>
-                          </div>
-                        </form>
-                      </div>
-                    <div id="cash-out-from" class=" card bg-base-100 shadow-2xl hidden">
-                        <form class="card-body py-4">
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Cash Out Ammount</span>
-                            </label>
-                            <input id="cash-out-ammount" type="number" placeholder="Enter your ammount" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control">
-                            <label class="label">
-                              <span class="label-text">Pin</span>
-                            </label>
-                            <input id="pin" type="password" placeholder="Enter your pin" class="input input-bordered" required />
-                          </div>
-                          <div class="form-control mt-6">
-                            <button id="cash-out-confirm" class="btn btn-primary" type="submit">Cash Out Confirm</button>
-                          </div>
-                        </form>
-                      </div>
-                      <!-- From section end -->
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-1">
+            <div class="divider m-0 container mx-auto flex"></div>
+            <!-- Account balance start-->
+            <div class="stats shadow">
+              <div class="stat">
+                <div class="stat-title text-center">Your Account Balance</div>
+                <div id="account-balance" class="stat-value text-center">
+                  9400
+                </div>
               </div>
             </div>
+            <!-- Account balance end-->
+            <div class="divider m-0 container mx-auto flex"></div>
+            <!-- Cash Out In section start -->
+            <div class="">
+              <button id="cash-in" class="btn btn-md bg-green-600">
+                Cash In
+              </button>
+              <button id="cash-out" class="btn btn-md border-none bg-red-600">
+                Cash Out
+              </button>
+              <button id="history-all" class="btn btn-md bg-yellow-500">
+                History
+              </button>
+            </div>
+
+            <!-- Cash Out In section start -->
+            <div class="divider m-0 container mx-auto flex"></div>
+            <!-- From section start -->
+            <div id="cash-in-from" class="card bg-base-100 shadow-2xl hidden">
+              <form class="card-body py-4">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash In Ammount</span>
+                  </label>
+                  <input
+                    id="cash-in-ammount"
+                    type="number"
+                    placeholder="Enter your ammount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="account-pin"
+                    type="password"
+                    placeholder="Enter your pin"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button
+                    id="cash-in-confirm-btn"
+                    class="btn btn-primary bg-green-600 border-none"
+                    type="submit"
+                  >
+                    Cash In Confirm
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div id="cash-out-from" class="card bg-base-100 shadow-2xl hidden">
+              <form class="card-body py-4">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash Out Ammount</span>
+                  </label>
+                  <input
+                    id="cash-out-ammount"
+                    type="number"
+                    placeholder="Enter your ammount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="pin"
+                    type="password"
+                    placeholder="Enter your pin"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button
+                    id="cash-out-confirm"
+                    class="btn btn-primary border-none bg-red-600"
+                    type="submit"
+                  >
+                    Cash Out Confirm
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- From section end -->
+            <!-- History Section start -->
+            <div id="transection-history" class="hidden text-center">
+              <h6 class="text-xl font-bold text-center">Transection History</h6>
+            </div>
+
+            <!-- History Section end -->
           </div>
+        </div>
+      </div>
     </main>
-
-    
-
-
-
-
-
-
-
-
-
 
     <script src="utilities.js"></script>
     <script src="new.js"></script>
-</body>
+  </body>
 </html>
