@@ -14,7 +14,7 @@ function getInputValue(id) {
 function getTextValue(id) {
     const a = document.getElementById(id).innerText;
     const b = parseFloat(a);
-    return b;
+    []
 }
 
 
